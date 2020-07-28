@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EventBeaconRequest;
-use Bavix\Entry\Models\Entry;
-use Illuminate\Http\Response;
-use Illuminate\Support\Str;
 use Laravel\Sanctum\PersonalAccessToken;
 use App\Http\Requests\EventRequest;
 use Illuminate\Http\JsonResponse;
@@ -41,7 +38,7 @@ class EventController extends Controller
                 $defaults,
                 ['date' => $item['datetime']],
                 $item,
-                $_COOKIE // spec
+                $eventRequest->cookie()
             ));
 
             $entry->save();
