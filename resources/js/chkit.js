@@ -115,7 +115,7 @@ export default function (baseUrl, token) {
                 })
             }
         }
-    }, 300)
+    })
 
     return this
 };
