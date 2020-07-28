@@ -42,6 +42,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+            \App\Http\Middleware\EncryptCookies::class,
             TokenInBodyAuthorization::class,
             EnsureFrontendRequestsAreStateful::class,
             'throttle:120,1',
