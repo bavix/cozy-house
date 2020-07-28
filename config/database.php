@@ -35,6 +35,19 @@ return [
 
     'connections' => [
 
+        'bavix::clickhouse' => [
+            'driver' => 'bavix::clickhouse',
+            'host' => env('CH_HOST'),
+            'port' => env('CH_PORT'),
+            'database' => env('CH_DATABASE'),
+            'username' => env('CH_USERNAME'),
+            'password' => env('CH_PASSWORD'),
+//            'options' => [
+//                'timeout' => 10,
+//                'protocol' => 'https'
+//            ]
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
