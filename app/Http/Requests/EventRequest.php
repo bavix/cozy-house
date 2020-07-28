@@ -15,7 +15,7 @@ class EventRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return Auth::id() > 0;
+        return Auth::check();
     }
 
     /**
