@@ -28,7 +28,7 @@ class EventController extends Controller
             'app_name' => $appName,
             'device' => $device,
             'client_ip' => $eventRequest->getClientIp(),
-            'referrer_url' => '',
+            'referral_url' => '',
             'request_url' => $eventRequest->header('referer'),
             'user_agent' => (string)$eventRequest->userAgent(),
         ];
