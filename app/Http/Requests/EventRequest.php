@@ -35,6 +35,17 @@ class EventRequest extends FormRequest
             '*.identify' => 'required|uuid',
             '*.client_id' => 'string',
             '*.datetime' => 'required|date',
+
+            // analytics
+            '*._ga' => 'string',
+            '*._gid' => 'string',
+            '*._ga_cid' => 'string',
+            '*.__gads' => 'string',
+            '*._ym_uid' => 'string',
+            '*._ym_d' => 'string',
+            '*.tmr_lvid' => 'string',
+            '*.tmr_lvidts' => 'string',
+            '*._fbp' => 'string',
         ];
     }
 
