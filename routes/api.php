@@ -34,27 +34,8 @@ Route::post('/sanctum/token', function (Request $request) {
     return compact('token');
 });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::middleware('auth:sanctum')->get('/dictionaries', 'DictionaryController@index')
-    ->name('dictionaries:index');
-
 Route::middleware('auth:sanctum')->post('/events', 'EventController@store')
     ->name('events:store');
 
 Route::middleware('auth:sanctum')->post('/sendBeacon', 'EventController@sendBeacon')
     ->name('events:sendBeacon');
-
-//Route::post('/hello', function (Request $request) {
-//    return [
-//        'language' => $request->getPreferredLanguage(),
-//        'referer' => $request->header('referer'),
-//        'uri' => $request->input('uri'),
-//    ];
-//});
-//
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
