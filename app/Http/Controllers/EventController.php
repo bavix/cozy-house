@@ -15,7 +15,7 @@ class EventController extends Controller
      * @param EventRequest $eventRequest
      * @return JsonResponse
      */
-    public function store(EventRequest $eventRequest): JsonResponse
+    public function store(EventRequest $eventRequest)//: JsonResponse
     {
         /**
          * @var $token PersonalAccessToken
@@ -28,8 +28,7 @@ class EventController extends Controller
             'app_name' => $appName,
             'device' => $device,
             'client_ip' => $eventRequest->getClientIp(),
-            'referral_url' => '',
-            'request_url' => $eventRequest->header('referer'),
+            'request_url' => (string)$eventRequest->header('referer'),
             'user_agent' => (string)$eventRequest->userAgent(),
         ];
 
@@ -39,6 +38,7 @@ class EventController extends Controller
                 $defaults,
                 ['date' => $item['datetime']],
                 $item,
+                ['referral_url' => (string)$item['referral_url']],
                 $eventRequest->cookie()
             ));
 

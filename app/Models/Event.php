@@ -58,6 +58,8 @@ class Event extends Entry
      * @var string[]
      */
     protected $casts = [
+        'referral_url' => 'string',
+        'request_url' => 'string',
         'dictionary_id' => 'int',
         'payload' => 'string',
         'date' => 'date:Y-m-d',
