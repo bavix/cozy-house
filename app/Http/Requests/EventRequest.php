@@ -31,7 +31,7 @@ class EventRequest extends FormRequest
             '*.name' => 'required|string|min:1|max:255',
             '*.label' => 'required|string|min:1|max:255',
             '*.payload' => 'array',
-            '*.referral_url' => 'url',
+            '*.referral_url' => 'nullable|url',
             '*.identify' => 'required|uuid',
             '*.client_id' => 'string',
             '*.datetime' => 'required|date',
