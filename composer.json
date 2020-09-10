@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "bavix/cozy-house",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Analytical system.",
     "keywords": [
         "framework",
         "laravel"
