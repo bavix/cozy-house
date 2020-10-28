@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/sanctum/token', 'SanctumController@token')
+Route::post('/sanctum/token', [\App\Http\Controllers\SanctumController::class, 'token'])
     ->name('sanctum:token');
 
-Route::middleware('auth:sanctum')->post('/events', 'EventController@store')
+Route::middleware('auth:sanctum')->post('/events', [\App\Http\Controllers\EventController::class, 'store'])
     ->name('events:store');
 
-Route::middleware('auth:sanctum')->post('/sendBeacon', 'EventController@sendBeacon')
+Route::middleware('auth:sanctum')->post('/sendBeacon', [\App\Http\Controllers\EventController::class, 'sendBeacon'])
     ->name('events:sendBeacon');
