@@ -12,19 +12,19 @@
         "bavix/laravel-entry": "^2.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.1",
-        "laravel/framework": "^8.0",
-        "laravel/sanctum": "^v2.6",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^8.11",
+        "laravel/sanctum": "^v2.7",
         "laravel/tinker": "^v2.4",
         "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^v2.8",
-        "facade/ignition": "^2.3",
+        "facade/ignition": "^2.5",
         "fzaninotto/faker": "^1.9",
         "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.4"
     },
     "config": {
         "optimize-autoloader": true,

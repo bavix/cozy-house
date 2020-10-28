@@ -38,7 +38,7 @@ class EventController extends Controller
                 $defaults,
                 ['date' => $item['datetime']],
                 $item,
-                ['referral_url' => (string)$item['referral_url']],
+                ['referral_url' => (string)($item['referral_url'] ?? $defaults['request_url'])],
                 $eventRequest->cookie()
             ));
 
